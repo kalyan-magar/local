@@ -1,0 +1,14 @@
+header{
+    display: flex;
+ gap: 20px; 
+ background-color: black;
+ opacity: 0.8;
+ padding: 6px;
+ border-radius: 2px;
+ margin: 4px;
+ justify-content: end;
+}
+a{
+    color: white;
+    font-weight: bold;
+}

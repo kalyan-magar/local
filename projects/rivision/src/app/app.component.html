@@ -1,0 +1,55 @@
+
+<!-- String interpolation -->
+  <p [class.center]="isCenter">Center</p>
+
+<p [class]="color">name : &nbsp;&nbsp; {{name}} </p>
+
+<p>Id  &nbsp;&nbsp;&nbsp;:  &nbsp; &nbsp;{{id}}</p>
+
+<p [ngClass]="{'center':isCenter,'danger':fail}">email&nbsp;&nbsp; :&nbsp;&nbsp; {{email}} </p>
+
+<!-- Propery binding>> pass some attributes but only diffrence it work with boolean value..
+ngclass for multiple class we want to give then use it -->  
+
+<button [disabled]="isSunil" [ngClass]="fun()" > Enter</button>
+
+<input type="text" [disabled]="">
+
+<!-- we can give css inline styling here -->
+<p [style.color]="c">Allu Arjun</p>
+<p [ngStyle]="{'color':c,'backgroundColor':bgc,'text-align':isCenter}">Ajay Devgan</p>
+
+<!-- Event binding   template to component -->
+<button (click)="result($event)"> Check Result Event binding</button>
+<!-- twoway data binding synchronusly ,use directive name is >> ngModel
+cahnge in componet and temolate simultaneously-->
+<input type="text" placeholder="Enter name " [(ngModel)]="name">
+<p>Name is : {{name}}</p>
+
+<!-- Template reference -->
+<div #happy>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit
+    . Adipisci molestias perspiciatis laudantium minus ab vitae ea
+  </p>
+  
+</div>
+<div>{{happy.textContent}}</div>
+<div> {{ happy.textContent }}</div>
+<div> {{  happy.textContent }}</div>
+
+<h3>ngIf Demo</h3>
+<div *ngIf="(name==='kalyan')?true:false">
+  <p>HI it is true name is kalyan</p>
+</div>
+<h2>ngIF  then else with tempalte ref name(#) it work with ng-template</h2>
+<div *ngIf="(name==='kalyan') then trueBlock else falseBlock"></div>
+<ng-template  #trueBlock >
+  <p>true block name is kalyan</p>
+</ng-template>
+<ng-template #falseBlock>
+<p>false block name is not kalyan</p>
+</ng-template>
+
+
+<p>joking</p>
+<p  > </p>

@@ -1,0 +1,18 @@
+<h1>Come To Data Binding Project...!!</h1>
+<h3>Project Name :-  {{name}}</h3>
+<button [disabled]=dis> send Property Binding</button><br><br>
+<button   [ngClass]="{'light':isEnable, 'dark':isEnable}">Class multiple with [ngClass] decorator</button>
+<!-- \ -->
+<br><br>
+<button [ngStyle] ="{'background-color':c ,'color':'red'}">[ngStyle] multiple style </button>
+<!-- [style.background-color] -->
+<br><br>
+
+<button (click)="say()"> event Binding</button>
+
+<!-- one text if singnal is on go if not stop -->
+<br><br>
+<div [ngClass]="{'siOn':signalOnValue,'siOff':signalOffValue}">kalyan</div>
+
+
+

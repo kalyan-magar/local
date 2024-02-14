@@ -1,0 +1,11 @@
+<h1>Directives</h1>
+<h3 *ngIf="userAdmin then thenBlock else elseBlock"></h3>
+<br>
+<ng-template #thenBlock>
+ <p>admin is true</p>
+ <button (click)="fun()">say </button>
+</ng-template>
+<ng-template #elseBlock>
+  admin is not true
+  <h1>Try Practice  10000</h1>
+</ng-template>

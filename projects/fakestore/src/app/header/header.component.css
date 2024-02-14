@@ -1,0 +1,10 @@
+header{
+    height: auto;
+    background-color: azure;
+    display: flex;
+    justify-content: end;
+
+}
+button{
+    margin: 0px 50px;
+}

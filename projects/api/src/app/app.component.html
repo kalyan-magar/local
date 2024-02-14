@@ -1,0 +1,17 @@
+<!-- <h1>API Application Programing Interface</h1>
+<div class="grid-container">
+  <div *ngFor="let val of data"  class="A">
+      <div class="product">
+           <img src="{{val.image}}" alt="{{val.title}}" height="100 " width="100">
+           <h3>{{val.title}}</h3>
+           <p>{{val.price}} </p>
+      </div>
+  </div>
+</div> -->
+<!-- Pipe Demo -->
+<h1>{{title|lowercase}} </h1>
+<h3>Price:-{{number|currency:'INR'}} </h3>
+<h3>Person Details:-{{person|json}} </h3>
+<h3>Date:-{{d|date}} </h3>
+<h3>percent:-{{per|percent}} </h3>
+<h3>Slice :-{{title|pv :"hi":"hellow" }} </h3>

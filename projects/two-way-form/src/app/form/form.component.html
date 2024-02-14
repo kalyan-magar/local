@@ -1,0 +1,35 @@
+<p>form works!</p>
+
+<div>
+<div>
+    <!--[(ngModel)]="formData.name" -->
+    <form  #userForm="ngForm" (ngSubmit)="submitForm(userForm.value)"  >
+        <h2>User form</h2>
+    <label for="name">Enter Name</label>
+    <input type="text" id="name" name="name"  #nam="ngModel" ngModel>
+    <br> <br>
+    <label for="email">Enter Email</label>
+    <input type="email" id="email" name="email" ngModel #ema="ngModel">
+    <br><br>
+    <label for="password">Enter Password</label>
+    <input type="password" id="password" name="password"  ngModel #pas="ngModel">
+    <br><br>
+    <input type="submit" value="submit">
+    </form>
+    
+</div>
+
+</div>
+<div *ngIf="submittedData">
+    <h2 >onSubmit Data</h2>
+   {{submittedData | json}} 
+</div>
+
+<div>
+    <h2>onChange Data</h2>
+    {{nam.value}}
+    {{ema.value}}
+    {{pas.value}}
+   
+
+</div>

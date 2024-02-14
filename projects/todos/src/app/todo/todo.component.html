@@ -1,0 +1,6 @@
+
+<div *ngFor="let item of tasks , index as i" class="container">
+<div class="flex">{{item}} <button (click)=" delTodo(i)">Delete</button></div>
+</div>
+
+

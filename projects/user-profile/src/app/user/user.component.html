@@ -1,0 +1,7 @@
+<p>TCS Employee Profile</p>
+<ul style="display: flex; justify-content: start; ">
+    <li *ngFor="let u of userNames" style="list-style-type: none; ">
+       <button style="padding: 8px; background-color: rgb(207, 192, 192);"><a routerLink="/name" (click)=" passName(u.name)">{{u.name}}</a></button> 
+    </li>
+</ul>
+<router-outlet></router-outlet>

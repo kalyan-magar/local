@@ -1,0 +1,17 @@
+
+  <h1 class="text-center">Todos Application</h1>
+  <br>
+  <!-- <input type="text" [(ngModel)]="name">
+  <p>{{name}}</p> -->
+ <div class="container">
+  <input type="search" class="form-control" [(ngModel)]="task" (mouseenter)="addTask()" [placeholder]="name">
+  <button class="btn btn-secondary" (click)="addTask()">ADD</button>
+ 
+  <app-todo></app-todo>
+
+ </div>
+
+
+
+
+<router-outlet></router-outlet>

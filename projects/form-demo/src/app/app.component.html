@@ -1,0 +1,54 @@
+<h1>Forms</h1>
+
+<form ngForm #myForm="ngForm" (ngSubmit)="submit()" appearance="fill">
+
+<div>
+  <mat-form-field>
+    <mat-label> User Name :</mat-label>
+    
+    <input type="text" placeholder="Placeholder" matInput id="name"  ngModel #myBox="ngModel" name="userName" required>
+    <mat-error>
+    <div style="color: rgb(161, 143, 143);" class="errors" 
+           *ngIf="myBox.touched && myBox.errors?.['required'] ">USer Name Is required</div>
+    </mat-error>
+    <mat-hint>hint</mat-hint>
+  </mat-form-field>
+  
+ 
+</div>
+
+<div>
+  <mat-form-field>
+   <mat-label>passward</mat-label> 
+  
+   <input type="password" placeholder="Placeholder" matInput id="passward" name="passward" #myPass="ngModel" ngModel minlength="4">
+   <mat-error>
+   <div style="color: red;" *ngIf="myPass.touched&&myPass.errors?.['minlength']">min 4 letters required</div>
+   </mat-error>
+  </mat-form-field>
+  
+ 
+</div>
+
+<div>
+  <mat-form-field>
+    <mat-label appearance="fill">email</mat-label>
+    <input type="email" placeholder="Placeholder" matInput id="em" name="myemail" ngModel #myEm="ngModel"
+    pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9. -]+\.[a-zA-Z]{2,}">
+    <mat-error><div *ngIf="myEm.touched&&myEm.errors?.['pattern']">enter valid email </div></mat-error>
+
+    
+
+  </mat-form-field>
+  
+ 
+</div>
+
+ <button (click)="fun(myForm)" ngModel>click</button>
+ <input type="submit" value="submit me" [disabled]="!myForm.valid">
+
+
+</form>
+
+
+<router-outlet></router-outlet>

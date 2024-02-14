@@ -1,0 +1,42 @@
+<!-- <h1>Switch &  For Demo</h1>
+<button (click)="incr()"> change day</button>
+
+  Directive  simple meaning the manupulation or changes into the dom
+  ngSwitch is structural directive 
+  used to render template according to  value it take from "COMPONENT"
+  and based on that value it will modify / update /manupulate The DOM
+
+  content
+  ngSwitch >> used to as attribute to get the property Binding.
+  ngSwitchCase >> used to check the value with ngSwitch value it is responsible for rendring similar element in DOM
+  ngSwitchDefault >>
+<div [ngSwitch]="days">
+  <div *ngSwitchCase="0">Sunday</div>
+  <div *ngSwitchCase="1">Monday</div>
+  <div *ngSwitchCase="2">Tuesday</div>
+  <div *ngSwitchCase="3">Thrusday</div>
+  <div *ngSwitchCase="4">wednesday</div>
+  <div *ngSwitchCase="5">friday</div>
+  <div *ngSwitchCase="6">saturday</div>
+  <div *ngSwitchDefault> Wrong value please give 1 to 6</div>
+
+</div>
+<br>
+<br>
+<h1>ngFor</h1> 
+ ngFor is  repeator which works with  (for ... of) 
+n points to index of Data
+default values he knows :- index ,Odd ,even 
+  ; even as e ; first as f
+   and {{e}} first  {{f}}
+ 
+<div *ngFor="let n of data ; index as i">
+<p *ngIf="">
+  Data is : {{n}} is Index {{i}}
+</p>
+
+</div>
+<div *ngSwitchCase="1">Monday</div>
+-->
+<h1>{{keys}} {{value}}</h1>
+<button (click)="fetchData()">DATA</button>

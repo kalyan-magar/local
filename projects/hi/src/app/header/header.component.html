@@ -1,0 +1,23 @@
+<div style="display: flex; justify-content: center; align-items: center; width: 50%;height: 50%;">
+    <div>
+    <h3>COME TO Ayodhya....</h3>    
+<h1 style="color:blueviolet ;"> {{username}} </h1>
+<h4 style="color: #e08207;">"Say jay Shree {{topic}}.... !!"</h4>
+<img [src]="images" alt="Ram " style="height: 250px;width: 250px;">
+<br>
+<br>
+<a [href]=path style="text-decoration: none;">Here Click</a>
+</div>
+
+</div>
+
+<button style="background-color: green; border: goldenrod;color: white;
+border-radius: 2px; padding: 6px;
+"  
+(click)="onClick()">VISIT</button><br>
+<br>
+
+<button [disabled]=disFlag [ngClass]="{'light':newClass}" (click)="greet()" >test Disable flag</button>
+
+
+

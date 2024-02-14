@@ -1,0 +1,30 @@
+<h1>Two Way Data  Binding</h1>
+<dl>
+  <dt>enter name</dt>
+  <dd><input type="text" [(ngModel)]="value"></dd> 
+  <dd>{{value}}</dd>
+  <dt>Enter email</dt>
+  <dd><input type="text" [(ngModel)]="email"></dd>
+  <dt>Enter Pass </dt>
+  <dd><input type="text" [(ngModel)]="pass"></dd>
+  <dt>Show output</dt>
+  <dd>{{email}} </dd>
+  <dd>{{pass}}</dd>
+
+  <dd>
+    <select name="C" id="C" [(ngModel)]="color">
+      <option value="Red">Red</option>
+      <option value="green">Green</option>
+      <option value="blue">Blue</option>
+    </select>
+  </dd>
+  <dd> {{color}} </dd>
+</dl>
+<br>
+<div #num1    class="light">
+  <h1>Hello  World </h1>
+</div>
+<p>{{num1.textContent}}</p>
+<p>{{num1.innerHTML}}</p>
+
+

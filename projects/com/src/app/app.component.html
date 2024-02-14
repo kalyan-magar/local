@@ -1,0 +1,33 @@
+<!-- <h1>This is Parent Component</h1> -->
+<!-- here in Parent Componet we pass the meassage,before calling ,then message come 
+<div  style="display: flex; flex-direction: row; gap: 25px;">
+    <div *ngFor="let f of fruits">
+       <app-main  fruit="{{f}}" [messageToChild]="msg"></app-main> 
+       <app-main  fruit="{{f.fr}}" img="{{f.img}}"></app-main> 
+        
+
+    
+    </div>
+</div>
+-->
+
+<!-- <ul>
+    <li *ngFor="let n of names">
+        <app-main   name="{{n}}"></app-main>
+    </li>
+</ul> -->
+           <!-- (click)=fun($event) -->
+<!-- <app-main  (newItemEvent)="addItem($event)" name="{{names}}">
+</app-main>
+<ul>
+    <li *ngFor="let i of items">{{items}}</li>
+</ul> -->
+
+<!-- 
+<app-main   fruit="mango"></app-main>
+<app-main   fruit="orange"></app-main> -->
+<app-main   #child></app-main>
+<h1>Hello world</h1>
+<p #prr>I am Para world</p>
+<p #prr>HI am para 22</p>
+<button (click)="changeBG()">Change bg</button>

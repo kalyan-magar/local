@@ -1,0 +1,21 @@
+<h1>Reactive Forms</h1>
+<!--  [formGroup]=myForm -->
+<form action="" formArrayName="myForm" (ngSubmit)="submit()">
+  Email:-
+  <input type="text" formControlName="uname" required><br>
+  <div class="errors"  *ngIf="myForm.get('uname')?.touched && myForm.get('uname')?.errors?.['required']">wrong email</div><br>
+  Passward:-  
+  <input type="password" formControlName=""password><br>
+  <div class="errors" *ngIf="myForm.get('passward')?.errors?.['minlength']" >wrong pass</div>
+  Names:- 
+  <div type="text" formArrayName="names" *ngFor="let a of names.controls,index as i">
+    <input type="text" >
+    <button (click)="delete(i)">❎</button>
+  </div><br>
+  <button (click)="add()">add</button><br>
+
+<button (click)="show()">Show</button> <br>
+<input type="submit" value="submit">
+<!-- <div *ngFor="let a of controls">{{a.value}}</div>
+</form> -->
+<router-outlet></router-outlet>

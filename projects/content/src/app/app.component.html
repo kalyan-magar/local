@@ -1,0 +1,28 @@
+<!-- <ng-container *ngFor="let value of [1,2,3,4,5,6,7,8,]"> 
+  {{value}}
+</ng-container>
+
+<ng-container *ngIf="true then t1 else t2"></ng-container>
+<ng-template #t1>kalyan</ng-template>
+<ng-template #t2>Magar</ng-template> -->
+
+<h1>Parent</h1>
+<app-child>
+ <img [src]="path" />
+</app-child>
+<app-child>
+<h1 a>Hello world</h1>
+<h2>hi Allien</h2>
+<h3>hello BRother</h3>
+</app-child>
+<div style="display: flex; justify-content: space-evenly;">
+  <ng-container *ngFor="let i of path">
+    <app-child><img src={{i}} class="i"/></app-child>
+    </ng-container>
+</div>
+
+
+<router-outlet></router-outlet>
+
+
+

@@ -1,0 +1,10 @@
+
+<h1>Main Component</h1>
+<div>
+    <ul>
+        <li *ngFor="let u of  users"   style="list-style-type: none;" >
+           <button (click)="call(u.id)" >UName:-{{u.name }} &nbsp;&nbsp;&nbsp; Age:-{{u.age}}&nbsp;&nbsp;   Id:-{{u.id}}</button> 
+        </li>
+    </ul>
+</div>
+<router-outlet></router-outlet>
